@@ -1,0 +1,19 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Article</h4>
+<hr />
+<partial name="_ArticlesFormPartial" model="Model.Article"/>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

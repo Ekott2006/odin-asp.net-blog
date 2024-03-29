@@ -1,0 +1,29 @@
+@using WebApp.Model
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model DetailsModel
+
+
+<h5>Comments</h5>
+<hr/>
+<dl class="row">
+    @foreach (Comment comment in Model.CurrentArticle?.Comments)
+    {
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => comment.Commenter);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => comment.Commenter);
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => comment.Body);
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => comment.Body);
+        </dd>
+    }
+</dl>
+
+<h6>Add a New Comment</h6>
+<partial name="_CommentFormPartial" model="Model.NewComment"/>
+<hr/>
+

@@ -1,0 +1,24 @@
+@model WebApp.Model.Comment
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Commenter" class="control-label"></label>
+                <input asp-for="@Model.Commenter" class="form-control" />
+                <span asp-validation-for="@Model.Commenter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Body" class="control-label"></label>
+                <input asp-for="@Model.Body" class="form-control" />
+                <span asp-validation-for="@Model.Body" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <div class="p-2"></div>
+                <input type="submit" value="Add Comment" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
